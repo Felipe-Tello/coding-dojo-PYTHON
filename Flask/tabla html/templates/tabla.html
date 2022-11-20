@@ -1,0 +1,17 @@
+{% extends "index.html"%}
+{%block body%} 
+<table>
+    <tr>
+        <th>NOMBRE</th>
+        <th>APELLIDO</th>
+        <th>NOMBRE COMPLETO</th>
+    </tr>
+    {%for user in users %}
+    <tr>
+        <td>{{user["first_name"]}}</td>
+        <td>{{user["last_name"]}}</td>
+        <td>{{user["first_name"]}} {{user["last_name"]}}</td>
+    </tr>
+    {%endfor%}
+</table>
+{%endblock%}
